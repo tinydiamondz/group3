@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Last Day On Earth</title>
+        <link rel="stylesheet" href="explore.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="localtime">
+                <div class="date" id="dateid">...</div>
+            </div>
+            <div class="linkbar">
+                <div class="day" id="dayid">...</div>
+                <input type="text" value="https://www.umn.game.ini.punya.Kei.Pasha.Rafi.id"/>
+                <div class="clock" id="clockid">..</div>
+            </div>
+        </header>   
+        
+        <canvas></canvas>
+        <div id="activityPanel" class="activity-panel" style="display: none;">
+            <h3 id="zoneTitle">Activity</h3>
+            <div id="activityButtons"></div>
+        </div>
+        
+        <div id="customAlert" class="custom-alert">
+            <p>...</p>
+            <div class="alert-buttons"></div> 
+        </div>
+        
+        <div class="greeting" id="greetingid">...</div>
+
+        <div class="statbars">
+            <div class="stat">
+                <div class="col">
+                    <div class="icon">❤️</div>
+                    <div class="label">Health</div>
+                </div>
+                <div class="bar"><div class="fill health" style="width: 50%;"></div></div>
+            </div>
+            <div class="stat">
+                <div class="col">
+                    <div class="icon">🧼</div>
+                    <div class="label">Hygiene</div>
+                </div>
+                <div class="bar"><div class="fill hygiene" style="width: 50%;"></div></div>
+            </div>
+            <div class="stat">
+                <div class="col">
+                    <div class="icon">⚡</div>
+                    <div class="label">Stamina</div>
+                </div>
+                <div class="bar"><div class="fill stamina" style="width: 50%;"></div></div>
+            </div>
+            <div class="stat">
+                <div class="col">
+                    <div class="icon">🍗</div>
+                    <div class="label">Hunger</div>
+                </div>
+                <div class="bar"><div class="fill hunger" style="width: 50%;"></div></div>
+            </div>
+            <div class="stat">
+                <div class="col">
+                    <div class="icon">😊</div>
+                    <div class="label">Happiness</div>
+                </div>
+                <div class="bar"><div class="fill happiness" style="width: 50%;"></div></div>
+            </div>
+        </div>  
+        <div class="money" id="money">💰$..</div>
+
+        <footer class="footer">
+            <p>Copyright © Kei, Pasha, Rafi.</p>
+        </footer>
+
+        <script src="./data/collisions.js"></script>
+        <script src="./data/temple.js"></script>
+        <script src="./data/house.js"></script>
+        <script src="./data/lake.js"></script>
+        <script src="./data/market.js"></script>
+        <script src="./data/forest.js"></script>
+        <script src="explore.js"></script>
+        <script src="activity.js"></script>
+        <script src="canvas.js"></script>
+
+    </body>
+</html>

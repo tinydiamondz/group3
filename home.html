@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Last Day On Earth</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="localtime">...</div>
+            <div class="linkbar">
+                <div class="rules" id="gamerules">Game Rule</div>
+                <input type="text" value="https://www.umn.game.ini.punya.Kei.Pasha.Rafi.id"/>
+                <div class="clock" id="clockid">..</div>
+            </div>
+        </header>
+        
+        <div class="logoUcup">
+            <h1>Last Day On Earth</h1> 
+        </div>
+        <div class="container">
+            <div class="select-character">
+                <p>Select Your Character</p>
+            </div>
+            <div class="avatar-select">
+                <button id="prevBtn">◀</button>
+                <div id="avatar"></div>
+                <button id="nextBtn">▶</button>
+            </div>
+            <div class="input">
+                <input type="text" id="username" placeholder="Enter your name here..."/>
+                <button id="startBtn" onclick="startExploring()">Start Exploring</button>
+            </div>
+        </div>
+        <div id="customAlert" class="custom-alert">
+            <p>Please enter your name!</p>
+            <button onclick="closeAlert()">OK</button>
+        </div>
+
+        <footer class="footer">
+            <p>Copyright © Kei, Pasha, Rafi.</p>
+        </footer>
+          
+        <script src="script.js"></script>
+    </body>
+</html>

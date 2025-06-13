@@ -1,0 +1,392 @@
+
+body{
+    background-color: #faffdc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/home.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(173, 216, 230, 0.3);
+    background-blend-mode: overlay;
+    z-index: -1;
+    animation: fadeOut 2s ease forwards;
+    animation-delay: 0s;
+}
+
+/* header*/
+.header{
+    position: fixed;
+    background-color: #457b9d;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 0 #000000;
+}
+
+.localtime{
+    font-family: 'Press Start 2P';
+    font-size: 8px;
+    color: white;
+    text-shadow: 2px 2px 0px #000000;
+    margin-bottom: 5px;
+}
+
+.date{
+    text-align: center;
+    font-family: 'Press Start 2P';
+    font-size: 8px;
+    color: white;
+    text-shadow: 2px 2px 0px #000000;
+    margin-bottom: 4px;
+}
+
+.day, .clock{
+    font-family: 'Press Start 2P';
+    font-size: 15px;
+    color: white;
+    white-space: nowrap;
+    text-shadow: 2px 2px 0px #000000;
+    margin-bottom: 10px;
+}
+
+.linkbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 30px; 
+    box-sizing: border-box;
+}
+
+.day{
+    text-align: left;
+    margin-right: 30px;
+    animation: fadeIn 5s ease forwards;
+    animation-delay: 0s; 
+}
+
+.clock{
+    width: -30%;
+    text-align: right;
+    margin-left: 30px;
+}
+
+.linkbar input[type="text"]{
+    flex-grow: 1;
+    padding: 6px 10px;
+    font-family: 'Press Start 2P';
+    font-size: 10px;
+    border: 2px solid black;
+    background-color: white;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+/* greeting */
+.greeting{
+    font-family: 'Press Start 2P';
+    font-size: 10px;
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    background-color: #d0f4f1; 
+    padding: 8px 12px;
+    border: 2px solid #26a69a; 
+    border-radius: 2px;
+    box-shadow: 2px 2px 0px #1e6f68; 
+    text-shadow: 1px 1px 0px #ffffff; 
+    animation: fadeIn 5s ease forwards;
+    animation-delay: 0s;
+}
+
+/* status bar */
+.statbars{
+    position: absolute;
+    top: 110px;
+    left: 15px;
+    font-family: 'Press Start 2P';
+    font-size: 10px;
+    color: #f8c1c1;
+    text-shadow: 2px 1px 0px #8a2d47;
+    animation: fadeIn 5s ease forwards;
+    animation-delay: 0s; 
+}
+  
+.stat{
+    margin-bottom: 8px;
+}
+  
+.col{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 2px;
+}
+  
+.icon{
+    font-size: 12px;
+}
+  
+.label{
+    font-weight: bold;
+    font-size: 10px;
+}
+  
+.bar{
+    width: 150px;
+    height: 10px;
+    background-color: #e6e6e6;
+    border: 2px solid #bfbfbf;
+    box-shadow: 2px 2px 0px #999999;
+}
+  
+.fill{
+    height: 100%;
+}
+  
+.fill.health{
+    background-color: #d95550; 
+}
+
+.fill.hygiene{
+    background-color: #6db4d6; 
+}
+
+.fill.stamina{
+    background-color: #f2c45d; 
+}
+
+.fill.hunger{
+    background-color: #b59e53; 
+}
+
+.fill.happiness{
+    background-color: #b38ec9; 
+}
+
+.money{
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    font-family: 'Press Start 2P';
+    font-size: 12px;
+    color: #b38600;
+    background-color: #fff4bf;
+    padding: 8px 12px;
+    border: 2px solid #d4af37;
+    border-radius: 2px;
+    box-shadow: 2px 2px 0px #8b6f20;
+    text-shadow: 1px 1px 0px #fff2b0;
+    min-width: 50px;
+    text-align: center;
+    animation: fadeIn 5s ease forwards;
+    animation-delay: 0s; 
+}
+
+/* activity zone */
+.explore-zones{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px;
+}
+
+.explore-zones button{
+    font-family: 'Press Start 2P';
+    background-color: #fff8dc;
+    border: 2px solid #000;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 0 #aaa;
+    color: #333;
+    z-index: 20;
+    position: relative;
+}
+
+.explore-zones button:hover{
+    background-color: #b5f1ff;
+    color: #000;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+#activityPanel{
+    position: absolute;
+    z-index: 10;
+}
+
+/* desain alertnyaa*/
+.custom-alert{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    border-radius: 18px;
+    box-shadow: 3px 3px 0 #000;
+    padding: 70px 100px;
+    text-align: center;
+    font-family: 'Press Start 2P';
+    font-size: 15px;
+    color: #1d3557;
+}
+
+.custom-alert p{
+    margin: 0 0 30px 0;
+
+}
+
+.custom-alert button{
+    font-family: 'Press Start 2P';
+    font-size: 10px;
+    background-color: #d32937;
+    color: white;
+    border: 3px solid #000;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #000;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-alert button:hover{
+    background-color: #b0000f;
+    transform: translateY(-2px);
+}
+
+.custom-alert .alert-buttons{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 7px;              
+}
+
+/* tombol Restart */
+.custom-alert .btn-restart{
+    background-color: #ff6b00; 
+    color: #fff;
+    width: 165px
+}
+.custom-alert .btn-restart:hover{
+    background-color: #e05d00;
+    transform: translateY(-2px);
+}
+
+/* footer */
+.footer{
+    background-color: #457b9d;
+    color: white;
+    text-shadow: 2px 2px 0px #000000;
+    text-align: center;
+    padding: 2px 0;
+    font-family: 'Press Start 2P';
+    font-size: 7px;
+    box-shadow: 0 -3px 0px black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* animasi menghilang */
+@keyframes fadeOut{
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* animasi muncul */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+canvas{
+    display: block;
+    margin: 100px auto 60px auto;
+    border: 3px solid #333;
+    border-radius: 12px;
+    animation: fadeIn 5s ease forwards;
+    animation-delay: 0s; 
+}
+
+.custom-alert .alert-buttons button {
+    margin: 5px;
+    padding: 10px 12px;
+    font-size: 10px;
+    font-family: 'Press Start 2P';
+    background-color: #f4cb42;
+    color: black;
+    border: 2px solid #333;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.custom-alert .alert-buttons button:hover {
+    transform: scale(1.05);
+    background-color: #ffc107;
+}
+
+.activity-panel {
+    position: absolute;
+    top: 110px;
+    right: 20px;
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Press Start 2P';
+    font-size: 10px;
+    color: #000;
+    width: 220px;
+    box-shadow: 4px 4px 0 #000;
+    z-index: 100;
+}
+
+.activity-panel h3 {
+    margin-top: 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.activity-panel button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: 'Press Start 2P';
+    font-size: 10px;
+    background-color: #f3f3f3;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.activity-panel button:hover {
+    background-color: #ddd;
+}
+
